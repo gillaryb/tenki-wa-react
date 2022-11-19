@@ -1,0 +1,14 @@
+.search-field {
+  padding: 7px 7px 7px 30px;
+  border-radius: 18px;
+  border: 1px solid #000;
+}
+
+.search-input .search-button {
+  height: 40px;
+  position: relative;
+}
+
+.search-button {
+  margin-left: 10px;
+}

@@ -1,32 +1,31 @@
 import React from "react";
+import "./Advisory.css";
 
-export default function Advisory(){
-    return (
-      <div className="Advisory">
-        <div class="row one">
-          <div class="col shadow advisory precipitation">
-            <h5>
-              Precipitation
-              <div>60%</div>
-            </h5>
+export default function Advisory() {
+  return (
+    <ul className="Advisory row">
+      <li className="col-2 shadow precipitation">
+        <h5>
+          Precipitation
+          <div>60%</div>
+        </h5>
+      </li>
+      <li className=" col-2 shadow humidity">
+        <h5>
+          Humidity
+          <div>
+            <span></span> %
           </div>
-          <div class="col shadow advisory humidity">
-            <h5>
-              Humidity
-              <div>
-                <span id="humidity"></span> %
-              </div>
-            </h5>
+        </h5>
+      </li>
+      <li className=" col-2 shadow wind">
+        <h5>
+          Wind
+          <div>
+            <span></span> m/s
           </div>
-          <div class="col shadow advisory wind">
-            <h5>
-              Wind
-              <div>
-                <span id="wind"></span> m/s
-              </div>
-            </h5>
-          </div>
-        </div>
-      </div>
-    );
+        </h5>
+      </li>
+    </ul>
+  );
 }

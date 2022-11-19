@@ -1,0 +1,40 @@
+.Features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Features a {
+  text-decoration: none;
+}
+
+.Features .tokyo,
+.manila,
+.new-york {
+  padding: 0 20px;
+  margin-left: 18px;
+  margin-top: 15px;
+  line-height: 34px;
+  position: relative;
+  float: right;
+  right: -680px;
+  top: -52px;
+  border: 1px solid #984a59;
+  border-radius: 50px;
+  transition: all 150ms ease-in-out;
+}
+
+.Features .tokyo,
+.manila,
+.new-york {
+  color: #ffff;
+  background: #984a59;
+  border: 1px solid #984a59;
+}
+
+.features .tokyo:hover,
+.manila:hover,
+.new-york:hover {
+  background: #ffff;
+  color: #984a59;
+}

@@ -1,8 +1,9 @@
 import React from "react";
+import "./MenuBar.css";
 
 export default function MenuBar() {
   return (
-    <div className="Menubar pt-3">
+    <div className="Menubar pt-4">
       <form>
         <div className="row">
           <div className="col-8">
@@ -11,14 +12,19 @@ export default function MenuBar() {
               placeholder="Search for your city"
               size="40"
               autofocus="on"
+              className="search-field shadow-sm"
             />
-            <input type="submit" value="search" className="btn btn-primary " />
+            <input
+              type="submit"
+              value="Search"
+              className="btn btn-primary search-input "
+            />
             <input
               type="submit"
               value="Current Location"
-              className="btn btn-outline-primary"
+              className="btn btn-outline-primary search-button"
             />
-          </div>
+        </div>
         </div>
       </form>
     </div>

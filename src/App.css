@@ -1,2 +1,10 @@
-.App {
+body {
+  background: #ffebeb;
+}
+
+.App .weather-app {
+  border: none;
+  border-radius: 20px;
+  height: 650px;
+  background: #ffff;
 }

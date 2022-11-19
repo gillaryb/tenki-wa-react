@@ -1,9 +1,9 @@
 import React from "react";
+import "./Features.css";
 
 export default function Features() {
   return (
-    <div className="Features d-flex align-item-center">
-      <ul>
+      <ul className="Features d-flex ">
         <li>
           <a href="" className="new-york shadow-sm">
             New York
@@ -20,6 +20,5 @@ export default function Features() {
           </a>
         </li>
       </ul>
-    </div>
   );
 }

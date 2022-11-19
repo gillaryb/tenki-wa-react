@@ -1,0 +1,66 @@
+.MainWeather {
+  position: relative;
+  background: linear-gradient(
+    63deg,
+    rgb(242, 168, 168) 2.9%,
+    rgb(94, 46, 165) 102.1%
+  );
+  border: none;
+  text-align: center;
+  width: 21rem;
+  height: 500px;
+}
+
+.MainWeather .date-today {
+  padding: 20px 20px 10px 20px;
+  color: #ffff;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.MainWeather h1 {
+  text-align: center;
+  font-size: 45px;
+  color: #fcfefe;
+  font-family: "Poppins", sans-serif;
+}
+
+.MainWeather .main-icon {
+  display: block;
+  margin: 10px 70px;
+}
+
+.weather-temperature strong {
+  font-size: 70px;
+  color: #fcfefe;
+  font-family: "Poppins", sans-serif;
+}
+
+.weather-temperature a {
+  text-decoration: none;
+}
+
+.weather-temperature .celFarh {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
+  color: #111f4d;
+  font-size: 16px;
+}
+
+.weather-temperature .celcius {
+  color: #fcfefe;
+  cursor: default;
+}
+
+.weather {
+  list-style: none;
+  text-align: justify;
+  margin-top: -30px;
+  color: #111f4d;
+}
+
+.weather .today {
+  font-size: 23px;
+  font-weight: 500;
+  text-transform: capitalize;
+}

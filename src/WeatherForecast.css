@@ -1,0 +1,47 @@
+.WeatherForecast .week {
+  position: absolute;
+  column-gap: 8px;
+  top: 165px;
+  right: -70px;
+  border: none;
+  margin: 23px 0px;
+  width: 780px;
+}
+
+.WeatherForecast .day {
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+  background: #fcfefe;
+  border: 1px solid #fcfefe;
+  color: #111f4d;
+  font-family: "Work Sans", sans-serif;
+}
+
+.forecast-heading {
+  position: absolute;
+  top: 140px;
+  left: 500px;
+}
+
+.WeatherForecast .day:hover {
+  background: #fdffcd;
+}
+
+.WeatherForecast .date {
+  padding-bottom: 10px;
+}
+
+.WeatherForecast .temperature {
+  padding: 15px;
+}
+
+.WeatherForecast .forecast {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.WeatherForecast .date {
+  font-size: 14px;
+}

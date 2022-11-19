@@ -9,7 +9,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <div className="weather-app p-3 m-3 shadow">
+        <div className="weather-app p-4 m-3 shadow">
           <MenuBar />
           <Features />
           <MainWeather />
