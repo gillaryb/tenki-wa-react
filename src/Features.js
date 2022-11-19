@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Features() {
   return (
-    <div className="Features">
+    <div className="Features d-flex align-item-center">
       <ul>
         <li>
           <a href="" className="new-york shadow-sm">
