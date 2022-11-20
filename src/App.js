@@ -12,7 +12,7 @@ export default function App() {
         <div className="weather-app p-4 m-3 shadow">
           <MenuBar />
           <Features />
-          <MainWeather />
+          <MainWeather defaultCity="Tokyo"/>
           <WeatherForecast />
           <Advisory />
         </div>
