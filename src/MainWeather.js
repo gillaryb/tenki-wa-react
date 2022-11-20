@@ -8,7 +8,7 @@ export default function MainWeather() {
       <h1 className="city-name">YUKI</h1>
       <img src="icons/sunny-cloudy.svg" alt="sunny-cloudy" width="135px" />
       <div className="weather-temperature p-2">
-        <strong></strong>
+        <strong>32</strong>
         <span className="celFarh">
           <a href="#" className="celcius">
             ˚C{" "}

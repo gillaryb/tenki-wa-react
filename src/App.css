@@ -2,6 +2,10 @@ body {
   background: #ffebeb;
 }
 
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .App .weather-app {
   border: none;
   border-radius: 20px;

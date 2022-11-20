@@ -5,8 +5,8 @@ export default function Features() {
   return (
       <ul className="Features d-flex ">
         <li>
-          <a href="" className="new-york shadow-sm">
-            New York
+          <a href="" className="tokyo shadow-sm">
+            Tokyo
           </a>
         </li>
         <li>
@@ -15,8 +15,8 @@ export default function Features() {
           </a>
         </li>
         <li>
-          <a href="" className="tokyo shadow-sm">
-            Tokyo
+          <a href="" className="new-york shadow-sm">
+            New York
           </a>
         </li>
       </ul>

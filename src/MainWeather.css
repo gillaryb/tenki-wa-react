@@ -9,6 +9,7 @@
   text-align: center;
   width: 21rem;
   height: 500px;
+  top: -15px;
 }
 
 .MainWeather .date-today {
