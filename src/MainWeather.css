@@ -64,4 +64,11 @@
   font-size: 23px;
   font-weight: 500;
   text-transform: capitalize;
+  position: relative;
+  bottom: -55px;
+}
+
+.weather .max-min {
+  position: relative; 
+  bottom: -60px;
 }

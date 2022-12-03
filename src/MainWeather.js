@@ -8,11 +8,11 @@ export default function MainWeather(props) {
   function displayResponse(response) {
     setWeatherData({
       ready: true,
-      temperature: response.data.main.temperature,
-      city: response.data.main.name,
+      temperature: response.data.main.temp,
+      city: response.data.name,
       description: response.data.weather[0].description,
-      max: response.data.temp_max,
-      min: response.data.temp_min,
+      max: response.data.main.temp_max,
+      min: response.data.main.temp_min,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
@@ -24,7 +24,7 @@ export default function MainWeather(props) {
         <h1 className="city-name">{weatherData.city}</h1>
         <img src={weatherData.icon} alt={weatherData.description} width="135px" />
         <div className="weather-temperature p-2">
-          <strong>{weatherData.temperature}</strong>
+          <strong>{Math.round(weatherData.temperature)}</strong>
           <span className="celFarh">
             <a href="null" className="celcius">
               ˚C{" "}
@@ -39,9 +39,9 @@ export default function MainWeather(props) {
           <li className="today">{weatherData.description}</li>
           <li className="max-min">
             <strong>Max:</strong>
-            <span className="temp-today">{weatherData.max}</span>
+            <span className="temp-today"> {Math.round(weatherData.max)}˚</span> {" "}
             <strong>Min:</strong>
-            <span>{weatherData.min}</span>
+            <span> {Math.round(weatherData.min)}˚</span>
           </li>
         </ul>
       </div>
