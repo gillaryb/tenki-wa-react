@@ -25,9 +25,10 @@
   font-family: "Poppins", sans-serif;
 }
 
-.WeatherInfo .main-icon {
+.WeatherInfo canvas {
   display: block;
-  margin: 10px 70px;
+  margin: 0 auto;
+  margin-top: 30px;
 }
 
 .weather-temperature strong {

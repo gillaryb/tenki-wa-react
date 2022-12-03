@@ -17,7 +17,7 @@ export default function MainWeather(props) {
       description: response.data.weather[0].description,
       max: response.data.main.temp_max,
       min: response.data.main.temp_min,
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
     });
   }
 
@@ -38,36 +38,35 @@ export default function MainWeather(props) {
 
   if (weatherData.ready) {
     return (
-    <div className="MainWeather pt-4">
-    <form onSubmit={handleSubmit}>
-      <div className="row">
-        <div className="col-8">
-          <input
-            type="search"
-            placeholder="Search for your city"
-            size="40"
-            autoFocus="on"
-            className="search-field shadow-sm"
-            onChange={handleCityChange}
-          />
-          <input
-            type="submit"
-            value="Search"
-            className="btn btn-primary search-input "
-          />
-          <input
-            type="submit"
-            value="Current Location"
-            className="btn btn-outline-primary search-button"
-          />
-        </div>
+      <div className="MainWeather pt-4">
+        <form onSubmit={handleSubmit}>
+          <div className="row">
+            <div className="col-8">
+              <i className="fa fa-github" aria-hidden="true"></i>
+              <input
+                type="search"
+                placeholder="Search for your city"
+                size="40"
+                autoFocus="on"
+                className="search-field shadow-sm"
+                onChange={handleCityChange}
+              />
+              <input
+                type="submit"
+                value="Search"
+                className="btn btn-primary search-input "
+              />
+              <input
+                type="submit"
+                value="Current Location"
+                className="btn btn-outline-primary search-button"
+              />
+            </div>
+          </div>
+        </form>
+        <Features />
+        <WeatherInfo data={weatherData} />
       </div>
-    </form>
-    <Features />
-     <WeatherInfo data={weatherData} />
-  </div>
-    
-    
     );
   } else {
     search();
