@@ -7,12 +7,13 @@ import "./MainWeather.css";
 export default function MainWeather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const [location, setLocation] = useState(null);
 
   function displayResponse(response) {
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
-      date: new Date (response.data.dt * 1000),
+      date: new Date(response.data.dt * 1000),
       city: response.data.name,
       description: response.data.weather[0].description,
       max: response.data.main.temp_max,
@@ -21,16 +22,30 @@ export default function MainWeather(props) {
     });
   }
 
-  function handleSubmit(event){
-    event.preventDefault()
+  function handleSubmit(event) {
+    event.preventDefault();
     search();
   }
 
-  function handleCityChange(event){
-    setCity(event.target.value)
+  function handleCityChange(event) {
+    setCity(event.target.value);
   }
 
-  function search(){
+  function handleLocation(event) {
+    event.preventDefault();
+    setLocation();
+  }
+
+  function showlocation(position) {
+    const apiKey = "f0553e70ab5eb275ae36ae41c6ace9b0";
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metrics`;
+    axios.get(apiUrl).then(displayResponse);
+  }
+  navigator.geolocation.getCurrentPosition(showlocation);
+
+  function search() {
     const apiKey = "f0553e70ab5eb275ae36ae41c6ace9b0";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayResponse);
@@ -60,6 +75,7 @@ export default function MainWeather(props) {
                 type="submit"
                 value="Current Location"
                 className="btn btn-outline-primary search-button"
+                onClick={handleLocation}
               />
             </div>
           </div>
