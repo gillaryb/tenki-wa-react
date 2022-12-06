@@ -71,7 +71,7 @@ export default function MainWeather(props) {
                 className="btn btn-primary search-input "
               />
               <input
-                type="submit"
+                type="button"
                 value="Current Location"
                 className="btn btn-outline-primary search-button"
                 onClick={handleLocation}
