@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
 import Features from "./Features";
-import CurrentLocation from "./CurrentLocation";
 import axios from "axios";
 import "./MainWeather.css";
 
 export default function MainWeather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
-  const [location, setLocation] = useState(null);
 
   function displayResponse(response) {
     setWeatherData({
@@ -32,17 +30,25 @@ export default function MainWeather(props) {
     setCity(event.target.value);
   }
 
-  function handleLocation(event) {
-    event.preventDefault();
-    setLocation();
-  }
+   function handleLocation(event) {
+     event.preventDefault();
+     navigator.geolocation.getCurrentPosition(showLocation);
+   }
+
+   function showLocation(position) {
+     const apiKey = "f0553e70ab5eb275ae36ae41c6ace9b0";
+     let lat = position.coords.latitude;
+     let lon = position.coords.longitude;
+     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+     axios.get(apiUrl).then(displayResponse);
+   }
 
   function search() {
     const apiKey = "f0553e70ab5eb275ae36ae41c6ace9b0";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayResponse);
   }
-  
+
 
   if (weatherData.ready) {
     return (
@@ -64,7 +70,12 @@ export default function MainWeather(props) {
                 value="Search"
                 className="btn btn-primary search-input "
               />
-              <CurrentLocation data={weatherData} />
+              <input
+                type="submit"
+                value="Current Location"
+                className="btn btn-outline-primary search-button"
+                onClick={handleLocation}
+              />
             </div>
           </div>
         </form>
