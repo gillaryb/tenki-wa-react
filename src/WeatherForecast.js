@@ -1,35 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
-import WeatherIcon from "./WeatherIcon";
+import DailyForecast from "./DailyForecast";
 import "./WeatherForecast.css";
 export default function WeatherForecast(props) {
-  function displayWeatherForecast(response) {
-    console.log();
-  }
-console.log(props);
-  let longitude = props.coords.lon;
-   let latitude = props.coords.lat;
-  const apiKey = "a43564c91a6c605aeb564c9ed02e3858";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayWeatherForecast);
+  const [loaded, setLoaded] = useState(false);
+  const [forecast, setForecast] = useState(null);
 
-  return (
-    <div className="WeatherForecast">
-      <h4 className="forecast-heading">Weather Forecast</h4>
-      <div className="row week">
-        <div className="col-2 shadow-sm day">
-          <h5>Monday</h5>
-          <div className="date">Sept 6</div>
-          <img
-            src="icons/drizzle.svg"
-            alt="drizzle"
-            className="weather-icon"
-            width="110px"
-          />
-          <div className="temperature">28˚/ 22˚</div>
-          <div className="forecast">Rain</div>
+
+  function displayWeatherForecast(response) {
+    setForecast(response.data.daily);
+    setLoaded(true);
+  }
+
+  function load() {
+    let longitude = props.coords.lon;
+    let latitude = props.coords.lat;
+    const apiKey = "a43564c91a6c605aeb564c9ed02e3858";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+
+    axios.get(apiUrl).then(displayWeatherForecast);
+  }
+
+  if (loaded) {
+    return (
+      <div className="WeatherForecast">
+        <h4 className="forecast-heading">Weather Forecast</h4>
+        <div className="row week">
+          {forecast.map(function (dailyForecastData, index) {
+            if (index < 5) {
+              return (
+                <div className="col-2 shadow-sm day">
+                  <DailyForecast data={dailyForecastData} />
+                </div>
+              );
+            } else {
+              return null;
+            }
+          })}
         </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    load();
+  }
 }
