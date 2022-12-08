@@ -79,7 +79,7 @@ export default function MainWeather(props) {
             </div>
           </div>
         </form>
-        <Features />
+        <Features displayResponse={displayResponse}/>
         <WeatherInfo data={weatherData} />
       </div>
     );
