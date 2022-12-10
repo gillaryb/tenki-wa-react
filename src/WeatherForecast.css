@@ -2,7 +2,7 @@
   position: absolute;
   column-gap: 8px;
   top: 165px;
-  right: -70px;
+  right: 30px;
   border: none;
   margin: 23px 0px;
   width: 780px;
@@ -12,7 +12,8 @@
   font-size: 18px;
   padding: 10px;
   text-align: center;
-  background: #fcfefe;
+  /* background: #fcfefe; */
+  background: #F9F2ED;
   border: 1px solid #fcfefe;
   color: #111f4d;
   font-family: "Work Sans", sans-serif;
