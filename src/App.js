@@ -9,7 +9,6 @@ export default function App() {
       <div className="container">
         <div className="weather-app p-4 m-3 shadow">
           <MainWeather defaultCity="Tokyo" />
-          <WeatherForecast />
           <Advisory />
         </div>
       </div>
