@@ -1,6 +1,5 @@
 import "./App.css";
 import MainWeather from "./MainWeather";
-import WeatherForecast from "./WeatherForecast";
 import Advisory from "./Advisory";
 
 export default function App() {
