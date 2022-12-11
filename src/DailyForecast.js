@@ -54,9 +54,10 @@ export default function DailyForecast(props) {
       {" "}
       <h5>{day()}</h5>
       <div className="date">{dateForecast()}</div>
-      <WeatherIcon code={"01d"} size={55} />
+      <WeatherIcon code={props.data.weather[0].icon} size={55} />
       <div className="temperature">
-        {maxTemperature()}˚/ {minTemperature()}˚
+        <span className="max-temp"> {maxTemperature()}˚</span>
+        <span className="min-temp"> {minTemperature()}˚</span> 
       </div>
       <div className="forecast">{props.data.weather[0].description}</div>
     </div>

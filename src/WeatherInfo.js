@@ -18,12 +18,12 @@ export default function WeatherInfo(props){
           <li className="today">{props.data.description}</li>
           <li className="max-min">
             <strong>Max:</strong>
-            <span className="temp-today">
+            <span className="max-temp">
               {" "}
               {Math.round(props.data.max)}˚
             </span>{" "}
             <strong>Min:</strong>
-            <span> {Math.round(props.data.min)}˚</span>
+            <span className="min-temp"> {Math.round(props.data.min)}˚</span>
           </li>
         </ul>
       </div>

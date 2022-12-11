@@ -7,14 +7,16 @@ export default function Advisory() {
       <li className="col-2 shadow precipitation">
         <h5>
           Precipitation
-          <div>60%</div>
+          <div>
+            <span className="temperature">%</span>
+          </div>
         </h5>
       </li>
       <li className=" col-2 shadow humidity">
         <h5>
           Humidity
           <div>
-            <span></span> %
+            <span className="temperature">%</span> 
           </div>
         </h5>
       </li>
@@ -22,7 +24,7 @@ export default function Advisory() {
         <h5>
           Wind
           <div>
-            <span></span> m/s
+            <span className="temperature">m/s</span> 
           </div>
         </h5>
       </li>

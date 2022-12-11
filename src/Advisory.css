@@ -2,8 +2,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  bottom: 145px;
-  left: 412px;
+  bottom: 160px;
+  left: 400px;
   position: relative;
 }
 
@@ -18,23 +18,13 @@
   margin-left: 20px;
   margin-top: 15px;
   text-align: center;
-  color: #111f4d;
+  color: #594544;
   border-radius: 35px;
+   background: #f7f4f2;
+  letter-spacing: 1px;
+  font-family: "Work Sans", sans-serif
 }
 
-.Advisory .precipitation {
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgb(10, 174, 227) 0%,
-    rgb(124, 182, 255) 100.2%
-  );
-}
-
-.Advisory .humidity {
-  background: linear-gradient(-225deg, #5d9fff 0%, #b8dcff 48%, #6bbbff 100%);
-  padding: px;
-}
-
-.Advisory .wind {
-  background: linear-gradient(60deg, #96deda 0%, #50c9c3 100%);
+.Advisory .temperature{
+  color: #810100;
 }

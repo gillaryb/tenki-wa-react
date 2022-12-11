@@ -1,43 +1,44 @@
-.WeatherInfo{
+.WeatherInfo {
   position: relative;
-  background: linear-gradient(
-    63deg,
-    rgb(242, 168, 168) 2.9%,
-    rgb(94, 46, 165) 102.1%
-  );
+  background: #9e7676;
   border: none;
   text-align: center;
   width: 21rem;
   height: 500px;
   top: -30px;
+  color: #fff8ea;
 }
 
 .WeatherInfo .date-today {
   padding: 20px 20px 10px 20px;
-  color: #ffff;
   font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  opacity: 0.8;
+  margin-bottom: 10px;
 }
 
 .WeatherInfo h1 {
   text-align: center;
   font-size: 45px;
-  color: #fcfefe;
   font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
 }
 
 .WeatherInfo canvas {
   display: block;
   margin: 0 auto;
   margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .weather-temperature strong {
   font-size: 70px;
-  color: #fcfefe;
   font-family: "Poppins", sans-serif;
 }
 
 .weather-temperature a {
+  color: #fff8ea;
+  opacity: 0.3;
   text-decoration: none;
 }
 
@@ -45,12 +46,10 @@
   position: relative;
   font-size: 16px;
   top: -34px;
-  color: #111f4d;
   font-size: 16px;
 }
 
 .weather-temperature .celcius {
-  color: #fcfefe;
   cursor: default;
 }
 
@@ -58,18 +57,29 @@
   list-style: none;
   text-align: justify;
   margin-top: -30px;
-  color: #111f4d;
 }
 
 .weather .today {
-  font-size: 23px;
+  font-size: 25px;
   font-weight: 500;
   text-transform: capitalize;
   position: relative;
-  bottom: -55px;
+  bottom: -50px;
+  letter-spacing: 1px;
 }
 
 .weather .max-min {
   position: relative;
-  bottom: -60px;
+  bottom: -50px;
+  letter-spacing: 1px;
+}
+
+.weather .max-temp, .min-temp{
+  color: #810100;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  opacity: 0.8;
 }

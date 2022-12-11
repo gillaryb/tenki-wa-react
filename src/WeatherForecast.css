@@ -1,7 +1,7 @@
 .WeatherForecast .week {
   position: absolute;
   column-gap: 8px;
-  top: 165px;
+  top: 185px;
   right: 30px;
   border: none;
   margin: 23px 0px;
@@ -12,37 +12,55 @@
   font-size: 18px;
   padding: 10px;
   text-align: center;
-  /* background: #fcfefe; */
-  background: #F9F2ED;
-  border: 1px solid #fcfefe;
-  color: #111f4d;
+  background: #f7f4f2;
+  border: 1px solid #f7f4f2;
+  color: #594545;
   font-family: "Work Sans", sans-serif;
 }
 
 .forecast-heading {
   position: absolute;
-  top: 140px;
-  left: 500px;
+  top: 150px;
+  left: 480px;
+  padding:  10px;
+  border-radius: 6px;
+ font-family: "Poppins", sans-serif;
+  color: #472D2D;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 26px;
 }
 
 .WeatherForecast .day:hover {
-  background: #fdffcd;
+  background: #E2C275;
 }
 
 .WeatherForecast .date {
   padding-bottom: 10px;
+  font-size: 17px;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .WeatherForecast .temperature {
-  padding: 15px;
+  padding: 10px;
+}
+
+.WeatherForecast .max-temp,
+.min-temp {
+  color: #810000;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.WeatherForecast .min-temp {
+  opacity: 0.6;
 }
 
 .WeatherForecast .forecast {
   text-transform: uppercase;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
-}
-
-.WeatherForecast .date {
-  font-size: 14px;
+  letter-spacing: 1px;
+  opacity: 0.8;
 }

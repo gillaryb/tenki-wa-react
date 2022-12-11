@@ -28,7 +28,8 @@
 .manila,
 .new-york {
   color: #ffff;
-  background: #984a59;
+  /* background: #984a59; */
+  background: #9C3D54;
   border: 1px solid #984a59;
 }
 
