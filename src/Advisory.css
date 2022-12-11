@@ -11,7 +11,7 @@
   display: inline-block;
 }
 
-.Advisory .precipitation,
+.Advisory .cloudiness,
 .humidity,
 .wind {
   padding: 20px;
@@ -22,9 +22,10 @@
   border-radius: 35px;
    background: #f7f4f2;
   letter-spacing: 1px;
-  font-family: "Work Sans", sans-serif
+  font-family: "Work Sans", sans-serif;
 }
 
-.Advisory .temperature{
+.Advisory .value{
   color: #810100;
+  letter-spacing: 1px;
 }

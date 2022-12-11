@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
 import Features from "./Features";
 import WeatherForecast from "./WeatherForecast";
+import Advisory from "./Advisory";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+
 import axios from "axios";
 import "./MainWeather.css";
 
@@ -10,6 +14,7 @@ export default function MainWeather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function displayResponse(response) {
+    console.log(response)
     setWeatherData({
       ready: true,
       coords: response.data.coord,
@@ -20,6 +25,9 @@ export default function MainWeather(props) {
       max: response.data.main.temp_max,
       min: response.data.main.temp_min,
       icon: response.data.weather[0].icon,
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
+      cloud: response.data.clouds.all
     });
   }
 
@@ -58,7 +66,7 @@ export default function MainWeather(props) {
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-8">
-              <i className="fa fa-github" aria-hidden="true"></i>
+              {/* <FontAwesomeIcon icon={faMagnifyingGlass} /> */}
               <input
                 type="search"
                 placeholder="Search for your city"
@@ -81,9 +89,10 @@ export default function MainWeather(props) {
             </div>
           </div>
         </form>
-        <Features displayResponse={displayResponse}/>
+        <Features displayResponse={displayResponse} />
         <WeatherInfo data={weatherData} />
-        <WeatherForecast coordinates={weatherData.coords}/>
+        <WeatherForecast coordinates={weatherData.coords} />
+        <Advisory data={weatherData} />
       </div>
     );
   } else {

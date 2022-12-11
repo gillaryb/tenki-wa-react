@@ -1,14 +1,14 @@
 import React from "react";
 import "./Advisory.css";
 
-export default function Advisory() {
+export default function Advisory(props) {
   return (
     <ul className="Advisory row">
-      <li className="col-2 shadow precipitation">
+      <li className="col-2 shadow cloudiness">
         <h5>
-          Precipitation
+          Cloudiness
           <div>
-            <span className="temperature">%</span>
+            <span className="value">{props.data.cloud}%</span>
           </div>
         </h5>
       </li>
@@ -16,7 +16,7 @@ export default function Advisory() {
         <h5>
           Humidity
           <div>
-            <span className="temperature">%</span> 
+            <span className="value">{props.data.humidity}%</span> 
           </div>
         </h5>
       </li>
@@ -24,7 +24,7 @@ export default function Advisory() {
         <h5>
           Wind
           <div>
-            <span className="temperature">m/s</span> 
+            <span className="value">{props.data.wind}m/s</span> 
           </div>
         </h5>
       </li>

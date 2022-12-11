@@ -32,7 +32,8 @@
 }
 
 .WeatherForecast .day:hover {
-  background: #E2C275;
+  /* background: #E2C275; */
+   background: #FEF7DC
 }
 
 .WeatherForecast .date {
