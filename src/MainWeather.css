@@ -43,7 +43,7 @@ footer {
 
 }
 
-footer a{
+footer a, footer a:hover{
 color: #810100;
 font-weight: 600;
 opacity: 0.7;

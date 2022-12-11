@@ -4,7 +4,7 @@ import Features from "./Features";
 import WeatherForecast from "./WeatherForecast";
 import Advisory from "./Advisory";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 import axios from "axios";
 import "./MainWeather.css";
@@ -14,7 +14,7 @@ export default function MainWeather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function displayResponse(response) {
-    console.log(response)
+    console.log(response);
     setWeatherData({
       ready: true,
       coords: response.data.coord,
@@ -27,7 +27,7 @@ export default function MainWeather(props) {
       icon: response.data.weather[0].icon,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      cloud: response.data.clouds.all
+      cloud: response.data.clouds.all,
     });
   }
 
@@ -40,25 +40,24 @@ export default function MainWeather(props) {
     setCity(event.target.value);
   }
 
-   function handleLocation(event) {
-     event.preventDefault();
-     navigator.geolocation.getCurrentPosition(showLocation);
-   }
+  function handleLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(showLocation);
+  }
 
-   function showLocation(position) {
-     const apiKey = "f0553e70ab5eb275ae36ae41c6ace9b0";
-     let lat = position.coords.latitude;
-     let lon = position.coords.longitude;
-     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-     axios.get(apiUrl).then(displayResponse);
-   }
+  function showLocation(position) {
+    const apiKey = "f0553e70ab5eb275ae36ae41c6ace9b0";
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayResponse);
+  }
 
   function search() {
     const apiKey = "f0553e70ab5eb275ae36ae41c6ace9b0";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayResponse);
   }
-
 
   if (weatherData.ready) {
     return (
@@ -73,7 +72,6 @@ export default function MainWeather(props) {
                 type="search"
                 placeholder="Search for your city"
                 size="40"
-                autoFocus="on"
                 className="search-field shadow-sm"
                 onChange={handleCityChange}
               />
@@ -97,15 +95,27 @@ export default function MainWeather(props) {
         <Advisory data={weatherData} />
         <footer>
           This project was coded by{" "}
-          <a href="https://www.linkedin.com/in/gilary-bacnis-17a553208/">
+          <a
+            href="https://www.linkedin.com/in/gilary-bacnis-17a553208/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Gilary Bacnis{" "}
           </a>{" "}
           and is{" "}
-          <a href="https://github.com/gillaryb/weather-app-react">
+          <a
+            href="https://github.com/gillaryb/weather-app-react"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             open-sourced on Github
           </a>{" "}
           and{" "}
-          <a href="https://master--golden-kulfi-6a1c55.netlify.app/">
+          <a
+            href="https://master--golden-kulfi-6a1c55.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             hosted on Netlify
           </a>{" "}
         </footer>
