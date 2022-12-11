@@ -93,6 +93,20 @@ export default function MainWeather(props) {
         <WeatherInfo data={weatherData} />
         <WeatherForecast coordinates={weatherData.coords} />
         <Advisory data={weatherData} />
+        <footer>
+          This project was coded by{" "}
+          <a href="https://www.linkedin.com/in/gilary-bacnis-17a553208/">
+            Gilary Bacnis{" "}
+          </a>{" "}
+          and is{" "}
+          <a href="https://github.com/gillaryb/weather-app-react">
+            open-sourced on Github
+          </a>{" "}
+          and {" "}
+          <a href="https://master--golden-kulfi-6a1c55.netlify.app/">
+            hosted on Netlify
+          </a>{" "}
+        </footer>
       </div>
     );
   } else {
