@@ -48,3 +48,8 @@ color: #810100;
 font-weight: 600;
 opacity: 0.7;
 }
+
+.icon {
+  position:relative;
+  left: 25px;
+}

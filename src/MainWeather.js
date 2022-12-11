@@ -3,8 +3,8 @@ import WeatherInfo from "./WeatherInfo";
 import Features from "./Features";
 import WeatherForecast from "./WeatherForecast";
 import Advisory from "./Advisory";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 import axios from "axios";
 import "./MainWeather.css";
@@ -66,7 +66,9 @@ export default function MainWeather(props) {
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-8">
-              {/* <FontAwesomeIcon icon={faMagnifyingGlass} /> */}
+              <span className="icon">
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
+              </span>
               <input
                 type="search"
                 placeholder="Search for your city"
@@ -102,7 +104,7 @@ export default function MainWeather(props) {
           <a href="https://github.com/gillaryb/weather-app-react">
             open-sourced on Github
           </a>{" "}
-          and {" "}
+          and{" "}
           <a href="https://master--golden-kulfi-6a1c55.netlify.app/">
             hosted on Netlify
           </a>{" "}
