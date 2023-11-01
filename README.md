@@ -1,7 +1,9 @@
 # TenkiWa
-
-Mock-up version of weather app build in React.js that uses OpenWeatherMapAPI to display 5 day weather forecast with impressive UI/UX.
+A mock-up version of weather application which is powered by OpenWeatherMapAPI, it provides a simple, stylish interface for a practical 5-day weather forecast. Check it out for a functional and user-friendly design.
 [See more](https://tenki-wa.tech/)
+
+OpenWeatherMapAPIを利用した天気アプリのモックアップ版です。実用的な5日間の天気予報を提供するシンプルでスタイリッシュなインターフェースが特徴です。機能的でユーザーフレンドリーなデザインをご覧ください。
+[続き見る](https://tenki-wa.tech/)
 <img width="1138" alt="tenki-wa" src="https://github.com/gillaryb/tenki-wa-react/assets/111226617/874b6102-da2c-4bb8-ac03-7edd8524bd3d">
 
 ## Build With 
